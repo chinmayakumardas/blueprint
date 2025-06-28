@@ -148,7 +148,7 @@ export default function HomePage() {
 
       {/* Header */}
       <header className="w-full flex justify-center mt-6 px-4 relative z-10">
-        <div className="bg-white/60 border border-black/10 px-6 py-3 rounded-full flex items-center justify-between w-full max-w-6xl backdrop-blur-md shadow-sm">
+        <div className="bg-white/60 border border-black/10 px-6 py-3 rounded-xl flex items-center justify-between w-full max-w-6xl backdrop-blur-md shadow-sm">
           <div className="text-xl font-bold tracking-tight">BluePrint</div>
           <div className="flex gap-3">
             <button
@@ -158,7 +158,7 @@ export default function HomePage() {
               Login
             </button>
             <button
-              onClick={() => router.push("/signup")}
+              onClick={() => router.push("/login")}
               className="text-sm px-4 py-2 bg-black hover:bg-gray-900 text-white rounded-md transition-all cursor-pointer shadow-md flex items-center justify-center"
             >
               Get Started
@@ -184,14 +184,14 @@ export default function HomePage() {
 
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
             <button
-              onClick={() => router.push("/signup")}
+              onClick={() => router.push("/login")}
               className="px-6 py-3 bg-black hover:bg-gray-900 text-white text-lg font-medium rounded-md  transition-all cursor-pointer shadow-md flex items-center justify-center"
             >
               Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
             <button
-              onClick={() => router.push("/demo")}
+              onClick={() => router.push("/login")}
               className="px-6 py-3 border border-black/10 text-black bg-white rounded-md cursor-pointer shadow-md text-lg font-medium hover:bg-black/5 transition-all"
             >
               Watch Demo

@@ -78,16 +78,18 @@ const fullNavData = [
 
 const teams = [
   {
-    name: "Acme Inc",
+    name: "BluePrint",
     logo: Users,
-    plan: "Enterprise",
+    plan: "Project Management",
   },
   
 ];
 
 export function AppSidebar(props) {
   return (
-    <Sidebar collapsible="icon" {...props}>
+    <Sidebar 
+
+    collapsible="icon" {...props}>
       <SidebarHeader>
         <TeamSwitcher teams={teams} />
       </SidebarHeader>
