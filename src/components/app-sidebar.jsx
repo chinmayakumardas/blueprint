@@ -1,15 +1,17 @@
-
 "use client";
 
 import * as React from "react";
 import {
   LayoutDashboard,
-  PhoneCall,
-  CalendarClock,
+  Phone,
+  Briefcase,
+  UserRound,
+  FolderClosed,
+  Settings,
+  Tags,
+  Layers,
+  Clock,
   User,
-  Folder,
-  ListChecks,
-  Users,
 } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
@@ -22,7 +24,7 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 
-// ✅ Your Lucide-based nav config
+// ✅ Cleaned nav config
 const fullNavData = [
   {
     title: "Dashboard",
@@ -30,59 +32,63 @@ const fullNavData = [
     icon: LayoutDashboard,
   },
   {
-    title: "Contact",
-    url: "/contacts",
-    icon: PhoneCall,
+    title: "Blog",
+    url: "/blog",
+    icon: Phone,
   },
   {
-    title: "Meeting",
-    url: "#",
-    icon: CalendarClock,
-    items: [
-      { title: "All Meetings", url: "/meetings/all" },
-      { title: "Calendar", url: "/meetings/calendar" },
-      { title: "Scheduled", url: "/meetings/scheduled" },
-    ],
+    title: "Services",
+    url: "/service",
+    icon: Briefcase,
   },
   {
-    title: "Client",
-    url: "/clients",
-    icon: User,
+    title: "User",
+    url: "/user",
+    icon: UserRound,
   },
-  {
-    title: "Project",
-    url: "/projects",
-    icon: Folder,
-  },
-  {
-    title: "Team",
-    url: "/teams",
-    icon: Users,
-  },
-  {
-    title: "Task",
-    url: "/tasks",
-    icon: ListChecks,
-  },
+ 
   {
     title: "Master",
     url: "#",
-    icon: CalendarClock,
+    icon: FolderClosed,
     items: [
-      { title: "Service", url: "/masters/services" },
-      { title: "Industry", url: "/masters/industry" },
-      { title: "Meeting Slots", url: "/masters/slots" },
+      {
+        title: "Tags",
+        url: "/master/tag",
+        icon: Tags,
+      },
+      {
+        title: "Industries",
+        url: "/master/service-categories",
+        icon: Layers,
+      },
+      {
+        title: "Blog Categories",
+        url: "/master/blog-categories",
+        icon: FolderClosed,
+      },
+      {
+        title: "Service Technologies",
+        url: "/master/service-technology",
+        icon: Briefcase,
+      },
+     
     ],
+  },
+   {
+    title: "Profile",
+    url: "/profile",
+    icon:  Settings,
   },
 ];
 
+// ✅ Teams dropdown (team-switcher)
 const teams = [
   {
-    name: "BluePrint",
-    logo: Users,
-    plan: "Project Management",
+    name: "AAS Admin",
+    logo: User,
+    plan: "Admin Panel",
   },
-  
 ];
 
 export function AppSidebar(props) {

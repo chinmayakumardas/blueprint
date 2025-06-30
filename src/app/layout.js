@@ -18,29 +18,7 @@ const geistMono = Geist_Mono({
 
 
 export default function RootLayout({ children }) {
-   useEffect(() => {
-    // Disable right click
-    // const blockRightClick = (e) => e.preventDefault();
-    // document.addEventListener("contextmenu", blockRightClick);
-
-    // Disable keyboard shortcuts
-    const blockShortcuts = (e) => {
-      if (
-        (e.ctrlKey && e.key === "s") || // Save
-        (e.ctrlKey && e.key === "u") || // View Source
-        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") || // Dev Tools
-        (e.metaKey && e.key === "s")    // macOS Save
-      ) {
-        e.preventDefault();
-      }
-    };
-    document.addEventListener("keydown", blockShortcuts);
-
-    return () => {
-      // document.removeEventListener("contextmenu", blockRightClick);
-      document.removeEventListener("keydown", blockShortcuts);
-    };
-  }, []);
+  
   return (
     <html lang="en">
       <body
