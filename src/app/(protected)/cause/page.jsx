@@ -1,4 +1,4 @@
-import CauseDashboard from "@/components/cause/causeDashboard";
+import CauseDashboard from "@/components/modules/cause/causeDashboard";
 
 
 

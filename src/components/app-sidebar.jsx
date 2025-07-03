@@ -66,6 +66,10 @@ const fullNavData = [
         title: "Scheduled",
         url: "/meetings/scheduled",
       },
+         {
+        title: "Mom Cause",
+        url: "/meetings/cause",
+      },
      
     ],
   },
@@ -91,6 +95,7 @@ const fullNavData = [
         title: "Meeting Slots",
         url: "/master/slots",
       },
+    
      
     ],
   },
@@ -142,7 +147,7 @@ export function AppSidebar(props) {
 
   // Role-based filtering
   const navdata =
-    userRole === "CPC"
+    userRole === "cpc"
       ? fullNavData
       : fullNavData.filter((item) =>
           ["Dashboard", "Project", "Task", "Team"].includes(item.title)
