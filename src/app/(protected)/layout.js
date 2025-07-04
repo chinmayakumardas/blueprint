@@ -93,7 +93,7 @@ export default function ProtectedLayout({ children }) {
               >
                 <Avatar className="h-9 w-9">
                   <AvatarImage
-                    src={userInfo.profilePicture}
+                    src={!userInfo.profilePicture || "/Avatar.png"}
                     alt={userInfo.fullName || "User"}
                   />
                   <AvatarFallback>

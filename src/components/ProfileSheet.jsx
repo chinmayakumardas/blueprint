@@ -57,7 +57,7 @@ export default function ProfileSheet({ open, onClose }) {
   const handleLogout = async () => {
     try {
       await dispatch(logoutUser()).unwrap()
-      toast.success("You have been successfully logged out." )
+      toast.success("successfully logged out." )
       onClose()
       router.push("/")
     } catch (error) {
@@ -80,12 +80,23 @@ export default function ProfileSheet({ open, onClose }) {
           <div className="flex-1 overflow-y-auto px-4 sm:px-6 py-4 space-y-6">
             {/* Profile Header */}
             <div className="flex flex-col items-center text-center gap-3">
-              <Avatar className="h-24 w-24 ring-4 ring-green-400 shadow-xl">
+              {/* <Avatar className="h-24 w-24 ring-4 ring-green-400 shadow-xl">
                 <AvatarImage src={userData?.profilePicture || "/Avatar.png"} />
                 <AvatarFallback className="text-xl text-white bg-gray-400">
                   {userData?.fullName?.split(" ").map(n => n[0]).join("") || "U"}
                 </AvatarFallback>
-              </Avatar>
+              </Avatar> */}
+              <Avatar className="h-24 w-24 ring-4 ring-green-400 shadow-xl">
+  <AvatarImage
+    src={!userData?.profilePicture || "/Avatar.png"}
+    alt="User Avatar"
+    className="w-full h-full object-cover"
+  />
+  <AvatarFallback className="text-xl text-white bg-gray-400">
+    {userData?.fullName?.split(" ").map(n => n[0]).join("") || "U"}
+  </AvatarFallback>
+</Avatar>
+
               <div>
                 <h2 className="text-xl font-bold text-blue-900">{userData?.fullName || "Loading..."}</h2>
                 <p className="text-sm text-muted-foreground">{userData?.role || "Employee"}</p>
