@@ -147,7 +147,7 @@ export function AppSidebar(props) {
 
   // Role-based filtering
   const navdata =
-    userRole === "cpc"
+    userRole === "CPC"
       ? fullNavData
       : fullNavData.filter((item) =>
           ["Dashboard", "Project", "Task", "Team"].includes(item.title)

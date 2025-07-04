@@ -113,7 +113,7 @@ export function DataTable() {
     (state) => state.dashboard.deadlineTasks
   );
   const { projects = [], status: projectStatus } = useSelector(
-    (state) => state.projects
+    (state) => state.project
   );
   const { allTeams, status: teamStatus } = useSelector((state) => state.team);
   console.log(projects);
