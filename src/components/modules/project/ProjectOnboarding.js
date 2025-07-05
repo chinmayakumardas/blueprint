@@ -75,7 +75,7 @@ export default function ProjectOnboarding() {
     if (successMessage && !hasHandledSuccess) {
       setHasHandledSuccess(true);
       toast.success(successMessage || "Project created successfully!");
-      router.push("/projects");
+      router.push("/project");
       dispatch(resetProjectCreation());
     }
     if (error) {
@@ -208,10 +208,10 @@ export default function ProjectOnboarding() {
       }
     });
 
-    if (errors.length > 0) {
-      setFileErrors(errors);
-      toast.error(errors.join(" "));
-    }
+    // if (errors.length > 0) {
+    //   setFileErrors(errors);
+    //   toast.error(errors.join(" "));
+    // }
 
     if (validFiles.length > 0) {
       setFormData((prev) => ({
@@ -605,3 +605,8 @@ export default function ProjectOnboarding() {
     </div>
   );
 }
+
+
+
+
+
