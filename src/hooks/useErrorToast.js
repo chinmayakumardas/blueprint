@@ -1,1 +1,0 @@
-// Error toast hook
